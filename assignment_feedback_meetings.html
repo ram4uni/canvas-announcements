@@ -65,7 +65,7 @@ function update(){
  if(today<slots[0].start)slot=slots[0];
  const active=document.getElementById('active'),finished=document.getElementById('finished');
  active.style.display=slot?'block':'none';finished.style.display=slot?'none':'block';
- if(slot){document.getElementById('thu').textContent=slot.thu;document.getElementById('fri').textContent=slot.fri;document.getElementById('month1').textContent=slot.month;document.getElementById('month2').textContent=slot.month;document.getElementById('heading').textContent=today>=slot.start&&today<=slot.end?'Current feedback meeting dates':'Upcoming feedback meeting dates';document.getElementById('status').textContent='Dates update automatically (UK time)';}
+ if(slot){document.getElementById('thu').textContent=slot.thu;document.getElementById('fri').textContent=slot.fri;document.getElementById('month1').textContent=slot.month;document.getElementById('month2').textContent=slot.month;document.getElementById('heading').textContent=today>=slot.start&&today<=slot.end?'Current feedback meeting dates':'Upcoming feedback meeting dates';document.getElementById('status').textContent='';}
  else document.getElementById('status').textContent='Schedule completed';
 }
 update();setInterval(update,60000);
